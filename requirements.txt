@@ -1,0 +1,12 @@
+# DJANGO
+django==2.2.10
+djangorestframework==3.9.2
+django-filter==2.4.0
+coreapi==2.3.3
+
+# DATABASE
+psycopg2==2.8.5
+
+# DEPLOY
+# daphne==3.0.1
+uvicorn==0.14.0
