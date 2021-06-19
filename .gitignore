@@ -1,2 +1,5 @@
 /config.ini
 /webapp.sock
+
+!/mainapp/migrations/__init__.py
+/mainapp/migrations/*
