@@ -27,8 +27,8 @@ services:
     volumes:
       - ./pg_data:/var/lib/postgresql/data
 
-  web:
-    build: ./_server/web
+  webapp:
+    build: ./_server/webapp
     ports:
       - "8003:8003"
     volumes:
