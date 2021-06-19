@@ -1,9 +1,12 @@
 [DJANGO]
 DEBUG=true
 SECRET_KEY=611bzr^b8t)@a)9s+2#-8i4-cw2!-e3kaoh94)z0+fy_qqc2(k
-DJANGO_ALLOWED_HOSTS=localhost 127.0.0.1 0.0.0.0 [::1]
+ALLOWED_HOSTS=localhost 127.0.0.1 0.0.0.0 [::1]
 
 [DATABASE]
+USE_SQLITE3=false
 POSTGRES_DB=postgresdb
 POSTGRES_USER=postgresuser
 POSTGRES_PASSWORD=postgrespassword
+POSTGRES_HOST=database
+POSTGRES_PORT=5432
