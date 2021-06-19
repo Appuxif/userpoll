@@ -32,7 +32,8 @@ services:
     ports:
       - "8003:8003"
     volumes:
-      - ./:/home/root/project
+      - ./:/home/project/app
+    working_dir: /home/project/app
     depends_on:
       - database
     stdin_open: true
@@ -49,4 +50,3 @@ services:
     volumes:
       - ./_server/nginx/conf.d:/etc/nginx/conf.d
       - ./_server/nginx/cert:/etc/letsencrypt
-      - ./_server/www:/var/www
