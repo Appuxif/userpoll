@@ -9,4 +9,5 @@ psycopg2==2.8.5
 
 # DEPLOY
 # daphne==3.0.1
-uvicorn==0.14.0
+# uvicorn==0.14.0
+gunicorn==20.0.4

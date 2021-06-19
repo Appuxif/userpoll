@@ -40,17 +40,17 @@ services:
       - database
     stdin_open: true
     tty: true
-    entrypoint: bash ./webapp-entrypoint.sh
+    entrypoint: bash ./webapp-entrypoint-lite.sh
 
-  nginx:
-    image: nginx:1.15-alpine
-    depends_on:
-      - webapp
-    networks:
-      - internal
-    ports:
-      - '80:80'
-      - '443:443'
-    volumes:
-      - ./_server/nginx/conf.d:/etc/nginx/conf.d
-      - ./_server/nginx/cert:/etc/letsencrypt
+#  nginx:
+#    image: nginx:1.15-alpine
+#    depends_on:
+#      - webapp
+#    networks:
+#      - internal
+#    ports:
+#      - '80:80'
+#      - '443:443'
+#    volumes:
+#      - ./_server/nginx/conf.d:/etc/nginx/conf.d
+#      - ./_server/nginx/cert:/etc/letsencrypt
