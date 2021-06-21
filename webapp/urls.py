@@ -23,8 +23,8 @@ from rest_framework.authtoken import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/token/auth/', views.obtain_auth_token),
-    path('', include('mainapp.urls', namespace='mainapp')),
+    path('api/v1/token/auth/', views.obtain_auth_token),
+    path('api/v1/', include('mainapp.urls', namespace='mainapp')),
 ]
 
 if settings.DEBUG:

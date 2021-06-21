@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'rest_framework.authtoken',
+    'django_filters',
 
     'mainapp',
 ]
@@ -157,15 +158,7 @@ if DEBUG is True:
 
 REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': REST_FRAMEWORK_DEFAULT_RENDERER_CLASSES,
-    # https://www.django-rest-framework.org/community/3.10-announcement/#continuing-to-use-coreapi
-    # You'll still be able to keep using CoreAPI schemas, API docs,
-    # and client for the foreseeable future. We'll aim to ensure that
-    # the CoreAPI schema generator remains available as a third party package,
-    # even once it has eventually been removed from REST framework,
-    # scheduled for version 3.12.
-    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
-    # 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
-    # 'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.NamespaceVersioning',
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.AutoSchema',
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.URLPathVersioning',
     'DEFAULT_VERSION': '1',
     'DEFAULT_PERMISSION_CLASSES': (
@@ -185,20 +178,7 @@ REST_FRAMEWORK = {
     #
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
     'PAGE_SIZE': 40,
-    #
-    # filter
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'SEARCH_PARAM': 'q',
     'ORDERING_PARAM': 'sort',
-    #
-    # 'DEFAULT_THROTTLE_CLASSES': [
-    #     # 'example.throttles.BurstRateThrottle',
-    #     # 'example.throttles.SustainedRateThrottle'
-    #     'rest_framework.throttling.ScopedRateThrottle',
-    # ],
-    # 'DEFAULT_THROTTLE_RATES': {
-    #     'contacts': '3/day',
-    #     # 'burst': '60/min',
-    #     # 'sustained': '1000/day'
-    # }
 }
