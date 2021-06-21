@@ -15,4 +15,4 @@ python manage.py shell -c "import init_admin"
 # Start server
 echo "Starting server"
 #python manage.py runserver 0.0.0.0:8083
-gunicorn --access-logfile - --workers 1 --timeout 30 --bind unix:./webapp.sock webapp.wsgi:application
+exec gunicorn --access-logfile - --workers 1 --timeout 30 --bind unix:./webapp.sock webapp.wsgi:application
